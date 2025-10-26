@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="container" id="accountPage">
+
+  <div id="loginSection">
+
+    <h2>تسجيل الدخول</h2>
+
+    <input type="text" id="loginUser" placeholder="اسم المستخدم"><br>
+
+    <input type="password" id="loginPass" placeholder="كلمة المرور"><br>
+
+    <button onclick="login()">دخول</button><br><br>
+
+    <button onclick="forgotPassword()">نسيت كلمة السر؟</button>
+
+    <p>ما عندكش حساب؟ <span class="toggle-link" onclick="showSignup()">إنشاء حساب جديد</span></p>
+
+  </div>
+
+  <div id="signupSection" class="hidden">
+
+    <h2>إنشاء حساب جديد</h2>
+
+    <input type="text" id="signupUser" placeholder="اسم المستخدم"><br>
+
+    <input type="password" id="signupPass" placeholder="كلمة المرور"><br>
+
+    <input type="text" id="signupPhone" placeholder="رقم الهاتف (11 رقم)"><br>
+
+    <input type="email" id="signupEmail" placeholder="البريد الإلكتروني (gmail.com)"><br>
+
+    <button onclick="signup()">إنشاء الحساب</button>
+
+    <p>عندك حساب بالفعل؟ <span class="toggle-link" onclick="showLogin()">تسجيل الدخول</span></p>
+
+  </div>
+
+</div>
+
+<div class="home" id="homePage">
+
+  <h1 id="homeTitle">🎮 أهلاً بك في Alpo Tik 🎮</h1>
+
+  <div id="sectionsContainer"></div>
+
+  
+
+  <hr>
+
+  <h2>📜 سجل عمليات الشراء</h2>
+
+  <div id="userOrdersList">
+
+    <p>لا توجد طلبات سابقة.</p>
+
+  </div>
+
+  <hr>
+
+  <button onclick="gotoAdminIfAdmin()">لوحة المشرف</button>
+
+  <button onclick="viewCart()">🛒 عرض سلة المشتريات</button>
+
+  <button onclick="logout()">تسجيل الخروج</button>
+
+  <div class="navLinks">
+
+    <a href="https://wa.me/201113318419?text=شحن حسابي" target="_blank">💸 شحن الحساب</a>
+
+    <a href="https://wa.me/201113318419?text=" target="_blank">📱 واتس آب</a>
+
+    <a href="https://t.me/Alpo_Tik" target="_blank" class="telegram">✈️ تليجرام</a>
+
+  </div>
+
+</div>
+
+<div class="adminPage" id="adminPage">
+
+  <h1>👑 لوحة المشرف 👑</h1>
+
+  <p>المشرف: <b>admin</b></p>
+
+  <h3>إدارة المستخدمين</h3>
+
+  <button onclick="loadUsers()">عرض المستخدمين</button>
+
+  <div id="usersList"></div>
+
+  <h3>إدارة الأقسام والسلع</h3>
+
+  <input type="text" id="newSectionName" placeholder="اسم القسم الرئيسي">
+
+  <button onclick="addSection()">إضافة قسم رئيسي</button>
+
+  <div id="sectionsList"></div>
+
+  
+
+  <hr>
+
+  <h3>📦 طلبات المستخدمين</h3>
+
+  <p>يجب الضغط على 'تحديث' لرؤية الطلبات الجديدة بعد شراء المستخدمين.</p>
+
+  <button onclick="loadOrdersAdmin()">تحديث عرض الطلبات</button>
+
+  <div id="ordersList"></div>
+
+  <button onclick="logout()">تسجيل الخروج</button>
+
+</div>
+
+<div id="cartModal">
+
+  <h3>🛒 سلة مشترياتك</h3>
+
+  <div id="cartContent"></div>
+
+  <button onclick="closeCart()">إغلاق</button>
+
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
